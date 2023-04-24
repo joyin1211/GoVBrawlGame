@@ -717,7 +717,7 @@ function chatChannel(e) {
             sendMessage(`{ "type": "startNumber", "startNumber": ${myNumber} }`);
             startGame();
         }
-        //console.log(e.data); //текст?
+        //console.log(e.data); //текст? (вся информация буквально)
 
     }
     _chatChannel.onclose = function () {
