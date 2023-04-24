@@ -1,0 +1,45 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>GraphicsJS Basic Example</title>    
+    <style>canvas { border: 1px solid black; }</style>
+  </head>
+  <body style="flex-direction: row; display: flex;">
+    <canvas id = "aboba" width ='600' height='600' style="z-index: 3">
+
+    </canvas>
+    <div style="flex-direction: column; display: flex;">
+        <div id="scorePrint" style="display: flex; margin-left: 20px;">
+          aboba
+        </div>
+        <div id="stepPrint" style="display: flex; margin-left: 20px;">
+          Blue turn!
+        </div>
+        <div id="sidePrint" style="display: flex; margin-left: 20px;">
+            Your color is not defined!
+        </div>
+        <div id="restartButton" style="display: flex; margin-left: 20px;">
+          <button onclick="startGame()">Restart</button>
+        </div>
+      </div>
+    <div style="display: flex; flex-direction: row; margin-top: 600px; position: absolute;">
+      <div>
+          <p>
+              Local
+              <textarea rows="4" cols="50" id=localOffer
+                  style="resize: none;"></textarea>
+              <button id=localOfferSet>CreateOffer</button>
+          </p>
+      </div>
+      <div style="margin-left: 70px;">
+          <p>
+              Remote
+              <textarea id="remoteOffer" rows="4" cols="50" placeholder="Paste remote SDP"
+                  style="resize: none;"></textarea>
+              <button id=remoteOfferGot>Answer</button>
+          </p>
+      </div>
+  </div>
+  <script src="abobaonline.js"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>GraphicsJS Basic Example</title>
+  <style>
+    canvas {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body style="flex-direction: row; display: flex;">
+  <div style="display: flex;">
+    <canvas id="aboba" width='600' height='600' style="z-index: 3;">
+    </canvas>
+  </div>
+  <div style="flex-direction: column; display: flex;">
+    <div id="scorePrint" style="display: flex; margin-left: 20px;">
+      aboba
+    </div>
+    <div id="stepPrint" style="display: flex; margin-left: 20px;">
+      Blue turn!
+    </div>
+    <div id="restartButton" style="display: flex; margin-left: 20px;">
+      <button onclick="startGame()">Restart</button>
+    </div>
+  </div>
+  <script src="aboba.js"></script>
+</body>
+
+</html>
