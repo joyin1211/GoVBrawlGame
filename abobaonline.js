@@ -177,6 +177,16 @@ function startGame() {
     drawField();
 }
 
+function restartGame() {
+    if (myStep == -1) {
+        return;
+    }
+    myNumber = Math.random();
+    sendMessage(`{ "type": "restart"}`);
+    sendMessage(`{ "type": "startNumber", "startNumber": ${myNumber} }`);
+    startGame();
+}
+
 function getNeighbours(x, y) {
     nb = new Array();
     if (x > 0 && y > 0) {
@@ -701,6 +711,11 @@ function chatChannel(e) {
             let x = info.posx;
             let y = info.posy;
             getStep(x, y);
+        }
+        if (info.type == "restart") {
+            myNumber = Math.random();
+            sendMessage(`{ "type": "startNumber", "startNumber": ${myNumber} }`);
+            startGame();
         }
         //console.log(e.data); //текст?
 
