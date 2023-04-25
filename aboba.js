@@ -348,7 +348,7 @@ function makeNeighbours(x, y) {
                     if (table[x][y].color == "red") {
                         table[dCell.x][dCell.y].color = "pink";
                     } else {
-                        tableif ()[dCell.x][dCell.y].color = "purple";
+                        table[dCell.x][dCell.y].color = "purple";
                     }
                     console.log(deadCells);
                     table[dCell.x][dCell.y].draw();
