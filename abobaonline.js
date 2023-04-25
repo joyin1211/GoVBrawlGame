@@ -58,7 +58,7 @@ var step = 0, snmCount = 0;
 
 console.log(canvasLeft, canvasTop);
 
-const FIELD_SIZE = 5;
+const FIELD_SIZE = 12;
 
 const cellSize = canvasHeight / (FIELD_SIZE + 1);
 const pdx = 0, pdy = 0;
@@ -557,7 +557,7 @@ function getStep(x, y) {
         }
         if(redScore > blueScore) {
             stepBlock.textContent = "Red wins!";
-        }
+        }drawFie
         if(blueScore == redScore) {
             stepBlock.textContent = "Draw!";
         }
@@ -568,14 +568,14 @@ function getStep(x, y) {
 function drawField() {
     ctx.strokeStyle = "black";
     ctx.lineWidth = 1;
-    for (let i = 0; i < FIELD_SIZE + 2; i++) {
+    for (let i = 1; i < FIELD_SIZE + 1; i++) {
         ctx.beginPath();
         ctx.moveTo(pdx, pdy + cellSize * i);
         ctx.lineTo(pdx + (FIELD_SIZE + 1) * cellSize, pdy + cellSize * i);
         ctx.closePath();
         ctx.stroke();
     }
-    for (let i = 1; i < FIELD_SIZE + 2; i++) {
+    for (let i = 1; i < FIELD_SIZE + 1; i++) {
         ctx.beginPath();
         ctx.moveTo(pdx + cellSize * i, pdy);
         ctx.lineTo(pdx + cellSize * i, pdy + cellSize * (FIELD_SIZE + 1));
